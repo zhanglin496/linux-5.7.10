@@ -530,6 +530,7 @@ out:
 int ip_rcv(struct sk_buff *skb, struct net_device *dev, struct packet_type *pt,
 	   struct net_device *orig_dev)
 {
+//获取设备属于的网络命名空间
 	struct net *net = dev_net(dev);
 
 	skb = ip_rcv_core(skb, net);
